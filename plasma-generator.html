@@ -1,0 +1,339 @@
+
+<html>
+<head>
+  <title>DomQ</title>
+  <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  crossorigin="anonymous"
+  />
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+
+  <style>
+  @media only screen and (min-width: 700px) {
+    .container {
+      max-width: 98%;
+    }
+    .col-sm {
+      width: 100%;
+    }
+    h1 {
+      font-size: 5rem;
+    }
+
+    .nav-link {
+      font-size: 2.5rem;
+    }
+  }
+  h1 {
+    margin: 25px 0px;
+    text-align: center;
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+  }
+  hr {
+    border-top: 3px solid 	#2F4F4F;
+  }
+  .main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+  }
+  p {
+    text-align: justify;
+  }
+  .nav {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-bottom: 30px;
+  }
+  .directive {
+    text-align: center;
+    height: 40vh;
+    margin: 0;
+  }
+  .link-rap {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header {
+    color: white;
+    margin: 0;
+    width: 100%;
+  }
+  .header:hover {
+    display: initial;
+  }
+  .robotics {
+    background-image: url("https://s.hdnux.com/photos/72/15/44/15259949/3/920x920.jpg");
+  }
+
+  .spacer-bot {
+    margin-bottom: 30px;
+  }
+  .nav-link {
+    font-size: 2.5rem;
+  }
+  .site-link:hover {
+    text-decoration-color: white;
+  }
+  .second {
+    padding: 0;
+  }
+  #plasma-ident {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  img {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .not-big {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #projects {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+    background-image: url("https://images2.minutemediacdn.com/image/upload/c_crop,h_3503,w_6250,x_0,y_345/f_auto,q_auto,w_1100/v1562010255/shape/mentalfloss/12797-gettyimages-1068422962_0.jpg");
+  }
+  #robotics {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+    background-image: url("https://s.hdnux.com/photos/72/15/44/15259949/3/920x920.jpg");
+  }
+  #software {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+    background-image: url("https://www.unilad.co.uk/wp-content/uploads/2017/10/matrix-code.jpg");
+  }
+  .project-img {
+    width: 100%;
+  }
+  .danger {
+    color: red;
+  }
+  .img-desc {
+    max-height: 25vh;
+    width: auto;
+    max-width: 1000px;
+  }
+  .last-el {
+    margin-bottom: 50px;
+  }
+  #bottom {
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container main">
+
+    <h1>Inertial Electrostatic Confinement Plasma Generator</h1>
+      <h2>Introduction</h2>
+      <img id="plasma-ident" src="images/colorful.jpg">
+      <p class="description">
+        This is a device was built out of mainly scrap parts over 6 months (I
+        am still upgrading it daily). It creates plasma through a process called inertial electrostatic confinement, or IEC. The basic layout consists of a vacuum chamber with an anode and cathode, a vacuum system to generate the vacuum, a HV power supply, and a gas injection system. The voltage potential between the central cathode wire cage and the chamber anode (-4kV in my case), ionizes the gas and accelerates it inward, where it heats up and eventually collides in the center, forming a plasma. Currently I have created plasma with the tiny amount of remaining air after a vacuum pump down, and regular hydrogen, synthesized by combining Aluminum foil and 0.1 M Sodium Hydroxide. See images of ambient air nitrogen plasma and general setup below. The plasma in the pictures was created at ~2.1kv and ~50 microns
+      </p>
+      <hr>
+      <h3>Vacuum System</h3>
+      <p class="description">
+        The vacuum system for the plasma generator is a Welch 8920A oil sealed rotary vane pump. I fully disassembled and refurbished it over the course of 6 months after getting it off ebay in terrible condition ( It was bad because I bought it for 200$ and they are usually sold for over $3000). This pump was connected to the chamber with a few feet 3/4in ID PVC tubing using metal compression sleeves. (The gas ballast stays closed during operation). The chamber pressure is measured with a VG64 digital vacuum gauge that is connected to the chamber by a series of flange adapters sealed with epoxy. The guage’s 0.5 micron resolution gives me a really good picture of the true pressure conditions. See internal mechanics, homemade part replacements, and before and after pics below:
+      </p>
+      <div class="row">
+        <div class="col not-big">
+          <figure class="figure">
+            <img src="images/uncleanvaneblock2.png" class="figure-img img-fluid rounded rotated" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="figure">
+            <img src="images/uncleanvaneshaft.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="figure">
+            <img src="images/uncleanlipseal.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="figure">
+            <img src="images/uncleanvaneblock.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <figure class="figure">
+            <img src="images/cleandissasembled.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="figure">
+            <img src="images/cleaninternal.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="figure">
+            <img src="images/cleaninternal2.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="figure">
+            <img src="images/cleaninternal3.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <figure class="figure">
+            <img src="images/cleaninternal4.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="figure">
+            <img src="images/cleadgasket.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="figure">
+            <img src="images/cleanvg64.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="figure">
+            <img src="images/cleanpump.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+      </div>
+<br>
+<hr>
+<h3> Cage and HV vacuum feedthrough</h3>
+<br>
+<p class="description">
+  I made my own HV feedthrough that feeds the cathode into the chamber without shorting it to the chamber or causing leaks. I did this by drilling a 1” hole in an old grinding wheel from a scrap dump, placing the stainless steel cage I built inside of it, sealing the bottom, and pouring in marine epoxy to fill the hole. The epoxy binds to the edges of everything it touches forming a seal, and its dielectric properties prevent a short. In a more recent generation I used Sodium Silicate instead of epoxy because it's a better dielectric, completely heat resistant (the cage gets really hot from the plasma), and off-gasses less, helping me reach a higher vacuum.
+</p>
+
+<ol>
+  <li>
+    <p>
+      I made my own HV feedthrough that feeds the cathode into the chamber <span class="danger">without shorting it to the chamber</span> or causing leaks</span>. I did this by drilling a 1” hole in an old grinding wheel from a scrap dump, placing the stainless steel cage I built inside of it, sealing the bottom, and pouring in marine epoxy to fill the hole. The epoxy binds to the edges of everything it touches forming a seal, and its dielectric properties prevent a short. In a more recent generation I used Sodium Silicate instead of epoxy because it's a better dielectric, completely heat resistant (the cage gets really hot from the plasma), and off-gasses less, helping me reach a higher vacuum.
+    </p>
+    <div class="row">
+      <div class="col">
+        <figure class="figure">
+          <img src="images/feedthru1.png" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+        </figure>
+      </div>
+      <div class="col">
+        <figure class="figure">
+          <img src="images/feedthru2.png" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+        </figure>
+      </div>
+      <div class="col">
+        <figure class="figure">
+          <img src="images/feedthru3.png" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </li>
+  <li>
+    <p>
+      I made my own HV feedthrough that feeds the cathode into the chamber without shorting it to the chamber or causing leaks. I did this by drilling a 1” hole in an old grinding wheel from a scrap dump, placing the stainless steel cage I built inside of it, sealing the bottom, and pouring in marine epoxy to fill the hole. The epoxy binds to the edges of everything it touches forming a seal, and its dielectric properties prevent a short. In a more recent generation I used Sodium Silicate instead of epoxy because it's a better dielectric, completely heat resistant (the cage gets really hot from the plasma), and off-gasses less, helping me reach a higher vacuum.
+    </p>
+  </li>
+</ol>
+<br>
+<hr>
+<h3> Chamber </h3>
+<p class="description">
+  The front window is 1” by 7” by 7” acrylic from a plastics store. The custom bolts I made compress the flange-feedthrough and the window onto the gaskets on both sides of the chamber, forming a seal. The gaskets are made from EDPM synthetic rubber. I cut them out of a large sheet with scissors. The chamber is made of 5 inch ID stainless steel tubing with 3 outlets of 3/4in OD stainless tubing welded on. Credit to Calvin Holmes for the welding. The small hairline fractures in the welds were sealed with Sodium Silicate. The third outlet is sealed off in the plasma images but is used for gas injection.
+</p>
+<div class="row">
+  <div class="col">
+    <figure class="figure">
+      <img src="images/chamba1.png" class="figure-img img-fluid rounded" alt="...">
+      <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+    </figure>
+  </div>
+  <div class="col">
+    <figure class="figure">
+      <img src="images/chamba2.png" class="figure-img img-fluid rounded" alt="...">
+      <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+    </figure>
+  </div>
+  <div class="col">
+    <figure class="figure">
+      <img src="images/chamba3.png" class="figure-img img-fluid rounded" alt="...">
+      <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+    </figure>
+  </div>
+</div>
+<br>
+<hr>
+<h3>2.1kv DC @200 mA power supply</h3>
+<p class="description">
+  This HV system consists of a variable water resistor (for current control), A variac, and then a center tapped 2.1 kv MOT feeding into a full bridge rectifier made from microwave oven diodes. Finally, two 1 uF microwave capacitors in parallel smooth the still fluctuating rectified DC to create a more “true” DC waveform. This provides the negative polarity 2.1kvdc needed for the plasma.
+</p>
+<div class="row">
+  <div class="col">
+    <figure class="figure">
+      <img src="images/power-supply-1.png" class="figure-img img-fluid rounded" alt="...">
+      <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+    </figure>
+  </div>
+  <div class="col">
+    <figure class="figure">
+      <img src="images/power-supply-2.png" class="figure-img img-fluid rounded" alt="...">
+      <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+    </figure>
+  </div>
+  <div class="col">
+    <figure class="figure">
+      <img src="images/power-supply-3.png" class="figure-img img-fluid rounded" alt="...">
+      <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+    </figure>
+  </div>
+  <div class="col not-big">
+    <figure class="figure">
+      <img src="images/power-supply-4.png" class="figure-img img-fluid rounded" alt="...">
+      <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+    </figure>
+  </div>
+</div>
+<hr id="bottom">
+</div>
+</body>
+</html>

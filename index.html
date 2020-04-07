@@ -1,0 +1,177 @@
+
+<html>
+  <head>
+    <title>DomQ</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+
+    <style>
+      @media only screen and (min-width: 700px) {
+        .container {
+          max-width: 98%;
+        }
+        .col-sm {
+          width: 100%;
+        }
+        h1 {
+          font-size: 5rem;
+        }
+
+        .nav-link {
+          font-size: 2.5rem;
+        }
+      }
+      h1 {
+        margin: 25px 0px;
+        text-align: center;
+        font-size: 4rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
+
+      .nav {
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        margin-bottom: 30px;
+      }
+      .directive {
+        text-align: center;
+        height: 65vh;
+        margin: 0;
+      }
+      .link-rap {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .header {
+        color: white;
+        margin: 0;
+        width: 100%;
+      }
+      .header:hover {
+        display: initial;
+      }
+      .robotics {
+        background-image: url("https://s.hdnux.com/photos/72/15/44/15259949/3/920x920.jpg");
+      }
+
+      .spacer-bot {
+        margin-bottom: 30px;
+      }
+      .nav-link {
+        font-size: 2.5rem;
+      }
+      .site-link:hover {
+        text-decoration-color: white;
+      }
+      .second {
+        padding: 0;
+      }
+      #plasma {
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("images/plasma-fusor.jpeg");
+      }
+      #projects {
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+        background-image: url("https://images2.minutemediacdn.com/image/upload/c_crop,h_3503,w_6250,x_0,y_345/f_auto,q_auto,w_1100/v1562010255/shape/mentalfloss/12797-gettyimages-1068422962_0.jpg");
+      }
+      #robotics {
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+        background-image: url("https://s.hdnux.com/photos/72/15/44/15259949/3/920x920.jpg");
+      }
+      #power {
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+        background-image: url("https://www.unilad.co.uk/wp-content/uploads/2017/10/matrix-code.jpg");
+      }
+      .project-img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+<h1>Dominick Quaye</h1>
+<ul class="nav nav-fill">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">My Resume</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Something Else</a>
+  </li>
+</ul>
+<div class="row align-items-center spacer-bot">
+  <div class="col-sm-8 directive">
+    <div class="col directive second">
+      <a class="site-link" href="projects.html">
+        <div class="link-rap" id="plasma">
+          <h2 class="header">Plasma Generator</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-4 directive">
+    <div class="col directive second">
+      <a class="site-link" href="projects.html">
+        <div class="link-rap" id="projects">
+          <h2 class="header">Electronics</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="row align-items-center spacer-bot">
+  <div class="col-sm directive">
+    <div class="col directive second">
+      <a class="site-link" href="#">
+        <div class="link-rap" id="robotics">
+          <h2 class="header">Robotics</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm directive">
+    <div class="col-sm directive">
+      <div class="col directive second">
+        <a class="site-link" href="#">
+          <div class="link-rap" id="power">
+            <h2 class="header">Power Supplies</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm directive">
+    <div class="col-sm directive">
+      <div class="col directive second">
+        <a class="site-link" href="#">
+          <div class="link-rap" id="design">
+            <h2 class="header">3D Design</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  </body>
+</html>
